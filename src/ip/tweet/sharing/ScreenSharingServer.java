@@ -47,7 +47,6 @@ import java.nio.channels.ServerSocketChannel;
 import javax.imageio.ImageIO;
 
 import ip.tweet.constant.ChatConstant;
-import ip.tweet.util.CommonUtil;
 import ip.tweet.util.SharedData;
 
 /**
@@ -84,9 +83,9 @@ public class ScreenSharingServer extends Thread {
 				ByteArrayOutputStream baos = new ByteArrayOutputStream();
 				ImageIO.write(capture, "png", baos);
 				baos.flush();
-				byte[] imageInByte = CommonUtil.packRaw(baos.toByteArray());
+				//byte[] imageInByte = CommonUtil.packRaw(baos.toByteArray());
 				baos.close();
-				sendOverSocket(imageInByte);
+				sendOverSocket(baos.toByteArray());
 				//Thread.sleep(100);
 			}
 		} catch (Exception e) {

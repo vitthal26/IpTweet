@@ -41,7 +41,6 @@ import java.nio.channels.SocketChannel;
 
 import ip.tweet.component.ScreenShareComponent;
 import ip.tweet.constant.ChatConstant;
-import ip.tweet.util.CommonUtil;
 
 /**
  * @author Vitthal Kavitake
@@ -77,8 +76,8 @@ public class ScreenSharingClient extends Thread {
 					for (int j = 0; j < size; j++) {
 						baos.write(bis.read());
 					}
-					byte[] packed = baos.toByteArray();
-					byte[] bytes = CommonUtil.unpackRaw(packed);
+					byte[] bytes = baos.toByteArray();
+					//byte[] bytes = CommonUtil.unpackRaw(packed);
 					screenShareComponent.setImageBytes(bytes);
 					
 					

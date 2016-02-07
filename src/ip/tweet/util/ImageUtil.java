@@ -42,7 +42,7 @@ import javax.swing.ImageIcon;
 public class ImageUtil {
 	public static Image getChatIconImage(){
 		Image image = new ImageIcon(Thread.currentThread().getContextClassLoader()
-				.getResource("images/1-1-24.png")).getImage();
+				.getResource("images/logo-24.png")).getImage();
 		return image;
 	}
 	public static Image getChatIconImage(int width, int height){
@@ -51,7 +51,7 @@ public class ImageUtil {
 	
 	public static Image getChatLogoImage(){
 		Image image = new ImageIcon(Thread.currentThread().getContextClassLoader()
-				.getResource("images/1-1-24.png")).getImage();
+				.getResource("images/logo-24.png")).getImage();
 		return image;
 	}
 	
@@ -61,7 +61,7 @@ public class ImageUtil {
 	
 	public static Image getChatLogoImageBig(){
 		Image image = new ImageIcon(Thread.currentThread().getContextClassLoader()
-				.getResource("images/1-1-150.png")).getImage();
+				.getResource("images/logo-150.png")).getImage();
 		return image;
 	}
 	
@@ -71,7 +71,7 @@ public class ImageUtil {
 	
 	public static Image getScreenShareImage(){
 		Image image = new ImageIcon(Thread.currentThread().getContextClassLoader()
-				.getResource("images/1-3-200.png")).getImage().getScaledInstance(16, 16, Image.SCALE_AREA_AVERAGING);
+				.getResource("images/share.png")).getImage().getScaledInstance(16, 16, Image.SCALE_AREA_AVERAGING);
 		return image;
 	}
 	public static Image getScreenShareImage(int width, int height){
