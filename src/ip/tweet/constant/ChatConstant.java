@@ -40,7 +40,7 @@ import java.awt.Font;
  */
 public class ChatConstant {
 	public static final String APP_NAME = " Ip Tweet";
-	public static final String COPYRIGHT_MSG = " Developed by Vitthal Kavitake";
+	public static final String COPYRIGHT_MSG = " Developed by  Vitthal Kavitake";
 	public static final String APP_VERSION = "v1.0";
 	
 	public static final boolean FILE_TRANSFER_ENABLED = true;

@@ -39,6 +39,7 @@ import java.awt.Image;
 import java.awt.Toolkit;
 
 import javax.swing.BorderFactory;
+import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -69,25 +70,19 @@ public class SplashScreen extends JWindow {
 		JLabel img = new JLabel(new ImageIcon(image, ChatConstant.APP_NAME));
 		JPanel textPanel = new JPanel();
 		textPanel.setLayout(new BoxLayout(textPanel, BoxLayout.Y_AXIS));
-		//textPanel.setAlignmentX(TOP_ALIGNMENT);
 		textPanel.setOpaque(false);
+		panel.add(Box.createHorizontalStrut(10));
 		panel.add(img);
 		JLabel text = new JLabel(ChatConstant.APP_NAME);
 		text.setForeground(Color.CYAN);
 		text.setFont(new Font("Times New Roman", Font.BOLD, 60));
 		
-		/*JPanel authorPanel = new JPanel();
-		authorPanel.setLayout(new BoxLayout(authorPanel, BoxLayout.X_AXIS));
-		authorPanel.setOpaque(false);*/
 		JLabel author = new JLabel(ChatConstant.COPYRIGHT_MSG);
 		
 		author.setForeground(Color.WHITE);
 		author.setFont(new Font("Arial", Font.HANGING_BASELINE, 20));
 		
 		textPanel.add(text);
-		//authorPanel.add(Box.createHorizontalGlue());
-		/*authorPanel.add(author);
-		textPanel.add(authorPanel);*/
 		textPanel.add(author);
 		panel.add(textPanel);
 		mainPanel.add(panel);
