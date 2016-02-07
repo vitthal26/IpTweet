@@ -1,0 +1,42 @@
+<project name="IpTweet, LAN Messenger" default="all">
+	<property name="basePath" value="."/>
+	<property name="resource.path" value="../resources" />
+	<property name="target" value="../target" />
+	<property name="binPath" value="${target}/tempBin"/>
+	<property name="version" value="1.0" />
+
+	<target name="all" depends="createJar" >
+		<echo>Build Successfull....</echo>
+	</target>
+
+	<!-- compile all java files -->
+	<target name="compile" description="compile classes">
+		<delete dir="${binPath}" />
+		<delete dir="${target}" />
+
+		<mkdir dir="${binPath}" />
+
+		<javac debug="false" srcdir="../src;../resources" destdir="${binPath}" fork="true" />
+		<copy todir="${binPath}">	
+			<fileset dir="../resources">
+				<include name="**/*.jar"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="createJar" depends="compile" description="create IpTweet.jar jar">
+		<jar destfile="${target}/IpTweet-${version}.jar" >
+			<manifest>
+				<attribute name="Class-Path" value="."/>
+				<attribute name="Main-Class" value="ip.tweet.client.IpTweet" />
+			</manifest>
+			<fileset dir="${binPath}">    	    			
+			</fileset>
+			<fileset dir="${resource.path}">    	    			
+			</fileset>
+		</jar>
+	</target>
+	<target name="clean">
+		<delete dir="${binPath}" />
+	</target>
+</project>
