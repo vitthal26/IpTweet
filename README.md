@@ -3,10 +3,16 @@ Ip Tweet - Java Based LAN Mesenger
 
 
 ## Key Features:
-  * One to One Instant Messaging
+  * Peer to peer instant messaging
   * Group Chat
-  * Easy File Sharing
   * Screen Sharing
+  * File sharing with peers
+  * cross platform
+  * Easy to use GUI
+  * No server required
+  * Track file transfer progress
+  * save message logs
+  * Lightweight
 
 ## Software Requirements:
   Java 1.7 and above
